@@ -1,0 +1,135 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(219, 227, 239, 0.9);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.navbar-logo:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.navbar-link {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--color-text-primary);
+  background: #f1f5f9;
+  text-decoration: none;
+}
+
+.navbar-username {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.role-badge--candidate {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.role-badge--admin {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.role-badge--superadmin {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.spinner-overlay {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: inherit;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(148, 163, 184, 0.28);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-message {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.9rem 1rem;
+  }
+
+  .navbar-center,
+  .navbar-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

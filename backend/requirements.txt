@@ -1,0 +1,33 @@
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0        # ASGI server that runs FastAPI
+
+# Database
+sqlalchemy==2.0.30               # ORM — maps Python classes to DB tables
+alembic==1.13.1                  # Handles DB migrations (schema changes over time)
+psycopg2-binary==2.9.9           # PostgreSQL driver — SQLAlchemy needs this to talk to Postgres
+
+# Auth & Security
+python-jose[cryptography]==3.3.0 # JWT creation and verification
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1          # Password hashing using bcrypt
+
+# Validation & Settings
+pydantic==2.7.1                  # Data validation (used by FastAPI automatically)
+pydantic-settings==2.2.1         # Loads .env into a Pydantic Settings class
+python-dotenv==1.0.1             # Reads .env file
+
+# Async task queue (Week 3 onwards, install now)
+celery==5.4.0                    # Background job queue
+redis==5.0.4                     # Redis client — Celery uses Redis as its broker
+
+# File handling
+python-multipart==0.0.9          # Required for FastAPI file uploads
+
+# HTTP client (backend calling ml_service)
+httpx==0.27.0                    # Async HTTP client
+
+# Dev & Testing
+pytest==8.2.0
+pytest-asyncio==0.23.6
+httpx                            # also used as test client for FastAPI

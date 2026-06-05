@@ -1,0 +1,27 @@
+# intelliverify/.gitignore
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/*.egg-info/
+
+# Virtual environments
+**/venv/
+**/.venv/
+
+# Secrets — NEVER commit these
+**/.env
+
+# Frontend
+**/node_modules/
+**/dist/
+**/.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
